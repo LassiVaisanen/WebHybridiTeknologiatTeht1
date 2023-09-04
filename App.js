@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
-  const [age, setAge] = useState(0);
+  const [age, setAge] = useState('');
   const [lower, setLower] = useState(0);
   const [upper, setUpper] = useState(0);
 
@@ -25,7 +25,7 @@ export default function App() {
       onEndEditing={text => calculateLimit()}
       />
       <Text style={styles.field}>Heart rate Limits</Text>
-      <Text style={styles.field}>{lower + " - " + upper}</Text>
+      <Text style={styles.field}>{lower.toString() + " - " + upper.toString()}</Text>
       <StatusBar style="auto" />
     </View>
   );
